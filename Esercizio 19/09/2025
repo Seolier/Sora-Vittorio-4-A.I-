@@ -1,0 +1,69 @@
+1. Requisiti Funzionali
+
+Questi requisiti descrivono cosa l'app deve fare, cioè le funzionalità che devono essere implementate per soddisfare gli utenti. Per il caso di un'app di viaggio tra amici, potrebbero includere:
+
+Creazione di gruppi di viaggio: Gli utenti devono poter creare un gruppo di amici per organizzare il viaggio.
+
+Pianificazione dell’itinerario: Possibilità di pianificare e condividere il percorso, con le tappe e le attività.
+
+Gestione delle prenotazioni: Opzione per inserire informazioni su voli, hotel, trasporti, ecc.
+
+Gestione delle spese: Funzione che consenta di tracciare e suddividere le spese tra i membri del gruppo.
+
+Chat di gruppo: Un sistema di messaggistica per comunicare in tempo reale tra i membri del gruppo.
+
+Lista di cose da fare: Un elenco condiviso per segnare le attività da fare prima del viaggio e durante.
+
+Condivisione di documenti: Possibilità di caricare e condividere documenti come biglietti, passaporti, o guide turistiche.
+
+Notifiche push: Avvisi per eventi importanti (scadenze, attività da fare, cambiamenti nell'itinerario).
+
+2. Requisiti Non Funzionali
+
+Questi requisiti definiscono come l'app deve comportarsi e si concentrano sulla qualità dell'applicazione. Ad esempio:
+
+Prestazioni: L’app deve essere veloce, con tempi di risposta rapidi (ad esempio, per aggiornare l’itinerario o per caricare le spese).
+
+Affidabilità: Deve essere stabile e senza bug, in modo che i dati non vengano persi, anche in caso di malfunzionamenti.
+
+Sicurezza: Protezione dei dati personali e sensibili degli utenti (ad esempio, informazioni di pagamento per prenotazioni).
+
+Usabilità: L’interfaccia utente deve essere semplice e intuitiva, con una curva di apprendimento minima.
+
+Compatibilità: L'app deve essere disponibile su più piattaforme (iOS, Android) e diversi dispositivi (smartphone, tablet).
+
+Scalabilità: Deve essere in grado di gestire un numero crescente di utenti senza compromettere le performance.
+
+3. Requisiti di Dominio
+
+Questi riguardano il contesto in cui l'app opererà. Si legano direttamente all’ambito di applicazione (in questo caso, l’organizzazione di viaggi tra amici):
+
+Sincronizzazione dei fusi orari: Considerare le diverse zone orarie dei membri del gruppo per la pianificazione.
+
+Geolocalizzazione: Utilizzare la geolocalizzazione per suggerire destinazioni, attrazioni turistiche o per tracciare la posizione in tempo reale.
+
+Lingue diverse: Possibilità di tradurre l'app in lingue diverse per facilitare l'utilizzo da parte di amici internazionali.
+
+Requisiti turistici: Integrazione con piattaforme di prenotazione per hotel, voli, noleggio auto, attività turistiche (e.g., Booking, Airbnb, Skyscanner).
+
+Adattamento culturale: Adattare le funzionalità in base a tradizioni culturali (ad esempio, festività o ferie nazionali in alcune destinazioni).
+
+4. Requisiti di Vincolo
+
+Questi sono limiti che l'app deve rispettare durante lo sviluppo, come risorse, tempi, tecnologie, ecc.
+
+Tempi di sviluppo: L’app deve essere sviluppata entro una determinata scadenza, ad esempio prima delle vacanze estive.
+
+Budget: Il costo del progetto deve rimanere entro determinati limiti.
+
+Tecnologie specifiche: L'app deve essere sviluppata usando tecnologie specifiche (ad esempio, Flutter o React Native per una soluzione multipiattaforma).
+
+Regolamenti legali: Deve essere conforme alla legislazione sulla protezione dei dati (GDPR, CCPA, ecc.).
+
+Integrazione con altre app: Possibile integrazione con altre app o servizi esterni, come Google Maps per la geolocalizzazione o PayPal per il pagamento delle spese.
+
+Esempio di "User Story" per un requisito funzionale:
+
+Come membro di un gruppo di amici che sta organizzando un viaggio, voglio poter inserire e visualizzare le prenotazioni per voli, hotel e attività, così da poter facilmente tenere traccia dei dettagli e delle informazioni pertinenti.
+
+Questa suddivisione ti aiuta a tenere traccia degli aspetti importanti del progetto e garantisce che l’app soddisfi sia le esigenze pratiche degli utenti che le limitazioni tecniche.
