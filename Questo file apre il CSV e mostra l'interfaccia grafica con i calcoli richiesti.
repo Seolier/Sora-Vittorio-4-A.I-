@@ -1,0 +1,54 @@
+import dearpygui.dearpygui as dpg
+from datetime import datetime
+
+def analizza_dati():
+    conteggi = {}
+    differenza_tempo = "N/A"
+    righe = []
+    
+    try:
+        with open("log_led.csv", "r") as f:
+            next(f) # Salta header
+            for riga in f:
+                parti = riga.strip().split(",")
+                righe.append(parti)
+                # Conteggio LED usando split
+                led_nome = parti[2]
+                conteggi[led_nome] = conteggi.get(led_nome, 0) + 1
+        
+        if len(righe) >= 2:
+            fmt = "%Y-%m-%d %H:%M:%S"
+            inizio = datetime.strptime(righe[0][0], fmt)
+            fine = datetime.strptime(righe[-1][0], fmt)
+            differenza_tempo = str(fine - inizio)
+            
+    except Exception as e:
+        print(f"Errore lettura: {e}")
+    return conteggi, differenza_tempo
+
+# Setup Interfaccia
+dpg.create_context()
+dpg.create_viewport(title='Analisi Dati Arduino', width=500, height=400)
+
+counts, durata = analizza_dati()
+
+with dpg.window(label="Dashboard Analisi", width=480, height=380):
+    dpg.add_text("Statistiche Utilizzo Sistema", color=[100, 200, 255])
+    dpg.add_spacer(height=10)
+    dpg.add_text(f"Durata totale sessione: {durata}")
+    dpg.add_separator()
+    
+    dpg.add_text("Frequenza accensione LED:")
+    with dpg.table(header_row=True, borders_innerH=True, borders_outerH=True, borders_innerV=True, borders_outerV=True):
+        dpg.add_table_column(label="LED")
+        dpg.add_table_column(label="Volte Acceso")
+        
+        for led, val in counts.items():
+            with dpg.table_row():
+                dpg.add_text(led)
+                dpg.add_text(str(val))
+
+dpg.setup_dearpygui()
+dpg.show_viewport()
+dpg.start_dearpygui()
+dpg.destroy_context()
